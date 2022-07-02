@@ -63,7 +63,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.map4d;
+})();
 })();
 </script>
 ```
@@ -149,6 +151,7 @@ var cnt = ctx.count;
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript">
+(function () {
 (function () {.factory;
 var naryFunction = require( '@stdlib/utils-nary-function' );
 var abs2 = require( '@stdlib/math-base-special-abs2' );
@@ -185,6 +188,7 @@ console.log( JSON.stringify( x, null, '  ' ) );
 console.log( 'y:' );
 console.log( JSON.stringify( y, null, '  ' ) );
 
+})();
 })();
 </script>
 </body>
