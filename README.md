@@ -18,6 +18,17 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # map4d
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
@@ -34,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-map4d
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import map4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map4d@deno/mod.js';
+var map4d = require( '@stdlib/utils-map4d' );
 ```
 
 #### map4d( arr, fcn\[, thisArg] )
@@ -49,8 +76,8 @@ import map4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map4d@deno/mod.js
 Applies a function to each nested element in a four-dimensional nested array and assigns the result to a nested element in a new four-dimensional nested array.
 
 ```javascript
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@deno/mod.js';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var arr = [
     [ [ [ -1, -2, -3 ] ] ],
@@ -64,10 +91,7 @@ var out = map4d( arr, naryFunction( abs, 1 ) );
 The applied function is provided the following arguments:
 
 -   **value**: array element.
--   **i0**: index of the first dimension.
--   **i1**: index of the second dimension.
--   **i2**: index of the third dimension.
--   **i3**: index of the fourth dimension.
+-   **indices**: current array element indices.
 -   **arr**: input array.
 
 To set the `this` context when invoking the input function, provide a `thisArg`.
@@ -75,7 +99,7 @@ To set the `this` context when invoking the input function, provide a `thisArg`.
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
+var abs = require( '@stdlib/math-base-special-abs' );
 
 function fcn( v ) {
     this.count += 1;
@@ -119,11 +143,11 @@ var cnt = ctx.count;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@deno/mod.js';
-import abs2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs2@deno/mod.js';
-import map4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map4d@deno/mod.js';
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var abs2 = require( '@stdlib/math-base-special-abs2' );
+var map4d = require( '@stdlib/utils-map4d' );
 
 function fill( n ) {
     if ( n > 0 ) {
@@ -186,7 +210,7 @@ console.log( JSON.stringify( y, null, '  ' ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
