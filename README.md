@@ -197,6 +197,15 @@ console.log( JSON.stringify( y, null, '  ' ) );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/utils-map`][@stdlib/utils/map]</span><span class="delimiter">: </span><span class="description">apply a function to each element in an array and assign the result to an element in an output array.</span>
+-   <span class="package-name">[`@stdlib/utils-map2d`][@stdlib/utils/map2d]</span><span class="delimiter">: </span><span class="description">apply a function to each nested element in an array of arrays and assign the result to a nested element in a new array of arrays.</span>
+-   <span class="package-name">[`@stdlib/utils-map3d`][@stdlib/utils/map3d]</span><span class="delimiter">: </span><span class="description">apply a function to each nested element in a three-dimensional nested array and assign the result to a nested element in a new three-dimensional nested array.</span>
+-   <span class="package-name">[`@stdlib/utils-map5d`][@stdlib/utils/map5d]</span><span class="delimiter">: </span><span class="description">apply a function to each nested element in a five-dimensional nested array and assign the result to a nested element in a new five-dimensional nested array.</span>
+
 </section>
 
 <!-- /.related -->
@@ -269,6 +278,18 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [branches-url]: https://github.com/stdlib-js/utils-map4d/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-map4d/main/LICENSE
+
+<!-- <related-links> -->
+
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
+
+[@stdlib/utils/map2d]: https://github.com/stdlib-js/utils-map2d
+
+[@stdlib/utils/map3d]: https://github.com/stdlib-js/utils-map3d
+
+[@stdlib/utils/map5d]: https://github.com/stdlib-js/utils-map5d
+
+<!-- </related-links> -->
 
 </section>
 
